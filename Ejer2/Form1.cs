@@ -16,6 +16,9 @@ namespace Ejer2
         private int smoking_index = 0;
         private bool nonsmoking_bool = false;
         private int nonsmoking_index = 0;
+
+        public int[] seats = new int[10];
+        int temp = 0;
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +28,14 @@ namespace Ejer2
         {
             MessageBox.Show(string1, "Yitle", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private bool Seat_Switch_Prompt(string message) 
+        {
+            DialogResult dialogResult = MessageBox.Show(message, "Comfirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return dialogResult == DialogResult.Yes;
+
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -70,12 +81,20 @@ namespace Ejer2
             {
                 Show_Error_MessageBox("Asiento Reservado");
                 nonsmoking_index++;
+                seats[nonsmoking_index + 5] = 1;
+                temp = nonsmoking_index + 5;
+
+
             }
             
 
             if (smoking_bool && smoking_index < 6)
             {
+                Show_Error_MessageBox("Asiento Reservado");
                 smoking_index++;
+                seats[smoking_index] = 1;
+                temp = smoking_index;
+
             }
 
             smokingFull = smoking_index > 5;
@@ -85,14 +104,39 @@ namespace Ejer2
             {
                 Show_Error_MessageBox("All seats are full. Next flight in 3 hours");
             }
-            else if (smokingFull && smoking_bool)
+             
+            
+            if (smokingFull && smoking_bool)
             {
-                Show_Error_MessageBox("Smoking seats full, next flight in 3 hours");
+                
+                bool seat_switch = Seat_Switch_Prompt("Smoking area seats full, Would you like to change to a non smoking area seat?");
+                if (seat_switch) 
+                {
+                    nonsmoking_index++;
+                    seats[nonsmoking_index + 5] = 1;
+                }
+                else
+                {
+                    Show_Error_MessageBox("All seats are full. Next flight in 3 hours");
+                }
+
+
             }
             else if (nonsmokingFull && nonsmoking_bool)
             {
-                Show_Error_MessageBox("Nonsmoking seats full, next flight in 3 hours");
+                bool seat_switch2 = Seat_Switch_Prompt("Non moking seats full, Would you like to change to a smoking area seat? ");
+                if (seat_switch2)
+                {
+                    smoking_index++;
+                    seats[smoking_index] = 1;
+                }
+                else
+                {
+                    Show_Error_MessageBox("All seats are full. Next flight in 3 hours");
+                }
             }
+
+            MessageBox.Show($"Yout seat is the #{temp} in the {(smoking_bool ? "smoking" : "non smoking")} zone");
  
         }
     }
