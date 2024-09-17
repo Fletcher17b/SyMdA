@@ -1,0 +1,4 @@
+Ejer 1 = Terminado
+Ejer 2 = Terminado
+Ejer 3 = Funcional 
+Ejer 4 = Terminado 

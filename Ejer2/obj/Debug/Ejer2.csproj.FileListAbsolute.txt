@@ -1,0 +1,10 @@
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\bin\Debug\Ejer2.exe.config
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\bin\Debug\Ejer2.exe
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\bin\Debug\Ejer2.pdb
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.Form1.resources
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.Properties.Resources.resources
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.csproj.GenerateResource.cache
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.exe
+C:\Users\Mario\Documents\UAM S2 MetPro\SyMdA\Ejer2\obj\Debug\Ejer2.pdb
